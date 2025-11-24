@@ -32,8 +32,13 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
-              <div className="py-6 px-6">
-                <Image src={Logo} alt="Quality Printout Logo" width={150} height={50} className="h-10 w-auto object-contain" />
+              <div className="">
+                <Image
+                  src={Logo}
+                  alt="Quality Printout Logo"
+                  className="h-20 w-auto object-contain"
+                  priority
+                />
               </div>
               <nav className="grid gap-4 text-lg font-medium">
                 {navLinks.map((link) => (

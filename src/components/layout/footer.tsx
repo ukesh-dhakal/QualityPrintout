@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="container py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 text-center md:grid-cols-2 lg:grid-cols-4 md:text-left">
           <div className="flex flex-col items-center md:items-start">
-            <Image src={Logo} alt="Quality Printout Logo" width={150} height={50} className="h-24 w-auto object-contain" />
+            <Image src={Logo} alt="Quality Printout Logo" width={200} height={80} className="h-32 w-auto object-contain" />
             <p className="mt-4 text-sm text-muted-foreground">
               Top-quality advertising prints.
             </p>
