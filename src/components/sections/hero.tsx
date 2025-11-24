@@ -19,14 +19,14 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="flex flex-col gap-6 lg:gap-8 text-center lg:text-left order-2 lg:order-1"
+            className="flex flex-col gap-6 lg:gap-8 text-center order-2 lg:order-1"
           >
             <div className="space-y-4">
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="inline-flex items-center justify-center lg:justify-start gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium w-fit mx-auto lg:mx-0"
+                className="inline-flex items-center justify-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium w-fit mx-auto"
               >
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -35,18 +35,18 @@ export default function HeroSection() {
                 Premium Commercial Printing
               </motion.div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-headline font-bold tracking-tight text-foreground leading-[1.1]">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-industrial font-bold tracking-tight text-foreground leading-[1.1]">
                 Precision Printing for <span className="text-primary">Industry Leaders</span>
               </h1>
 
-              <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                 Elevate your brand with high-fidelity offset and digital printing.
                 From large-scale marketing materials to intricate packaging, we deliver
                 quality that speaks for itself.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
                 className="h-14 px-8 text-lg rounded-full shadow-lg hover:shadow-primary/25 transition-all duration-300"
@@ -64,7 +64,7 @@ export default function HeroSection() {
               </Button>
             </div>
 
-            <div className="pt-4 flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-4 text-sm font-medium text-muted-foreground">
+            <div className="pt-4 flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm font-medium text-muted-foreground">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary" />
                 <span>24h Turnaround Available</span>

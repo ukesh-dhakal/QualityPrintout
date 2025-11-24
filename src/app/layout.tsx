@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Syne } from 'next/font/google';
+import { Inter, Syne, Oswald } from 'next/font/google';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import Footer from '@/components/layout/footer';
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const syne = Syne({ subsets: ['latin'], variable: '--font-syne' });
+const oswald = Oswald({ subsets: ['latin'], variable: '--font-oswald' });
 
 export default function RootLayout({
   children,
@@ -20,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${syne.variable}`}>
+    <html lang="en" className={`${inter.variable} ${syne.variable} ${oswald.variable}`}>
       <body className="font-body antialiased">
         <AppProvider>
           <div className="flex min-h-screen flex-col">
