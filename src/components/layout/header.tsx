@@ -13,7 +13,6 @@ import Logo from '@/assets/LogoTransparent.png'
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/products", label: "Products" },
-  { href: "/case-studies", label: "Case Studies" },
   { href: "/materials", label: "Materials" },
   { href: "/contact", label: "Contact" },
 ];

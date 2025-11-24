@@ -1,189 +1,129 @@
 "use client";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useApp } from "@/app/app-provider";
-import { Star } from "lucide-react";
-
-
-
-
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
-
-const products = [
-  "Business",
-  "Brochures",
-  "Marketing",
-  "Events",
-  "Startups",
-
-];
+import { motion } from "framer-motion";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export default function HeroSection() {
   const { handleOpenConfigurator } = useApp();
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % products.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
-    <section className="relative w-full  overflow-hidden bg-gradient-to-b from-background via-secondary/30 to-background">
-      <div className="container  ">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 content-center items-center mt- p-5">
-          <motion.div
-            className="text-center lg:text-left h-auto w-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h1 className="font-headline text-center text-3xl h-auto w-auto font-extrabold sm:text-4xl lg:text-5xl leading-tight">
-              Quality Printing for
-            </h1>
-            <div className="relative w-full text-center mt-2">
-              <span className="relative inline-block">
-                <span
-                  className="block text-3xl sm:text-5xl lg:text-6xl leading-tight opacity-0 pointer-events-none"
-                  aria-hidden="true"
-                >
-                  Business Cards
-                </span>
+    <section className="relative w-full overflow-hidden bg-background pt-20 lg:pt-0 p-10">
+      <div className="container relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center min-h-[calc(100vh-80px)] py-12 lg:py-0">
 
-                <span className="absolute top-0 left-0 w-full overflow-hidden">
-                  <AnimatePresence mode="wait">
-                    <motion.span
-                      key={products[index]}
-                      initial={{ y: "100%", opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      exit={{ y: "-100%", opacity: 0 }}
-                      transition={{ duration: 0.5, ease: "circOut" }}
-                      className="block text-3xl sm:text-5xl lg:text-6xl leading-tight text-center text-primary font-headline font-extrabold"
-                    >
-                      {products[index]}
-                    </motion.span>
-                  </AnimatePresence>
+          {/* Text Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="flex flex-col gap-6 lg:gap-8 text-center lg:text-left order-2 lg:order-1"
+          >
+            <div className="space-y-4">
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="inline-flex items-center justify-center lg:justify-start gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium w-fit mx-auto lg:mx-0"
+              >
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                 </span>
-              </span>
+                Premium Commercial Printing
+              </motion.div>
+
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-headline font-bold tracking-tight text-foreground leading-[1.1]">
+                Precision Printing for <span className="text-primary">Industry Leaders</span>
+              </h1>
+
+              <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                Elevate your brand with high-fidelity offset and digital printing.
+                From large-scale marketing materials to intricate packaging, we deliver
+                quality that speaks for itself.
+              </p>
             </div>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Professional printing and branding solutions designed to make
-              your business unforgettable.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button
                 size="lg"
-                className="rounded-full px-8 py-6 text-lg font-bold shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all"
+                className="h-14 px-8 text-lg rounded-full shadow-lg hover:shadow-primary/25 transition-all duration-300"
                 onClick={() => handleOpenConfigurator(null)}
               >
-                Get A Quote
+                Get a Custom Quote
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-
+              <Button
+                variant="outline"
+                size="lg"
+                className="h-14 px-8 text-lg rounded-full border-2 hover:bg-secondary/50"
+              >
+                View Our Portfolio
+              </Button>
             </div>
 
-            <div className="mt-12 flex items-center justify-center lg:justify-start gap-4 text-sm text-muted-foreground">
-              <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="h-8 w-8 rounded-full border-2 border-background bg-muted overflow-hidden">
-                    <Image src={`https://picsum.photos/seed/avatar${i}/100/100`} alt="Avatar" width={32} height={32} />
-                  </div>
-                ))}
+            <div className="pt-4 flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-4 text-sm font-medium text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-5 w-5 text-primary" />
+                <span>24h Turnaround Available</span>
               </div>
-              <p>Trusted by 500+ local businesses</p>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-5 w-5 text-primary" />
+                <span>Eco-Friendly Inks</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-5 w-5 text-primary" />
+                <span>Volume Discounts</span>
+              </div>
             </div>
           </motion.div>
 
-          <div className="relative h-[300px] sm:h-[400px] lg:h-[600px] flex items-center justify-center mt-8 lg:mt-0">
+          {/* Image Content */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className="relative order-1 lg:order-2"
+          >
+            <div className="relative aspect-[4/5] lg:aspect-square w-full max-w-md lg:max-w-none mx-auto">
+              {/* Main Image */}
+              <div className="absolute inset-0 rounded-[2rem] overflow-hidden shadow-2xl border border-border/50 bg-muted">
+                <Image
+                  src="/images/hero-industrial.png"
+                  alt="Industrial Offset Printing Press"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-700"
+                  priority
+                  quality={100}
+                  sizes="(max-width: 768px) 100vw, 80vw"
+                />
 
-            {/* Main Image */}
-            <motion.div
-              className="relative z-10"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <Image
-                src="https://picsum.photos/seed/voteman/400/500"
-                alt="Man holding a t-shirt that says VOTE NOW"
-                width={400}
-                height={500}
-                className="rounded-full object-cover shadow-2xl w-64 h-80 sm:w-80 sm:h-96 lg:w-[400px] lg:h-[500px]"
-                data-ai-hint="man t-shirt"
-              />
-            </motion.div>
+                {/* Overlay Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+              </div>
 
-            {/* Decorative Arc */}
-            <div className="absolute bottom-0 h-3/4 w-[150%] rounded-t-[100%] bg-gradient-to-t from-primary/10 via-primary/5 to-transparent" />
+              {/* Floating Badge */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+                className="absolute -bottom-6 -left-6 lg:bottom-10 lg:-left-10 bg-card p-4 rounded-2xl shadow-xl border border-border/50 max-w-[200px] hidden sm:block"
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="h-3 w-3 rounded-full bg-green-500" />
+                  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Status</span>
+                </div>
+                <p className="font-bold text-lg leading-tight">Operational & Ready for Orders</p>
+              </motion.div>
 
-            {/* Floating Product Images - Hidden on mobile, visible on larger screens */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-              className="absolute top-0 left-0 lg:top-10 lg:left-10 z-20 hidden sm:block"
-            >
-              <Image
-                src="https://picsum.photos/seed/totebag/200/200"
-                alt="Tote bag with world map"
-                width={150}
-                height={150}
-                className="rounded-xl shadow-lg transform -rotate-12 w-24 lg:w-[150px]"
-                data-ai-hint="tote bag"
-              />
-            </motion.div>
-
-
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.5, duration: 0.5 }}
-              className="absolute top-10 right-0 lg:top-16 lg:right-10 z-20 hidden sm:block"
-            >
-              <Image
-                src="https://picsum.photos/seed/mugs/200/150"
-                alt="Two custom printed mugs"
-                width={150}
-                height={112}
-                className="rounded-xl shadow-lg transform rotate-6 w-24 lg:w-[150px]"
-                data-ai-hint="custom mugs"
-              />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.5 }}
-              className="absolute bottom-10 right-0 lg:right-5 z-20 hidden md:block"
-            >
-              <Image
-                src="https://picsum.photos/seed/waxseal/200/150"
-                alt="Envelope with a wax seal"
-                width={160}
-                height={120}
-                className="rounded-xl shadow-lg transform -rotate-3 w-28 lg:w-[160px]"
-                data-ai-hint="wax seal"
-              />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.5 }}
-              className="absolute bottom-10 left-0 lg:left-5 z-20 hidden md:block"
-            >
-              <Image
-                src="https://picsum.photos/seed/giftbox/150/150"
-                alt="Gift box with a card"
-                width={120}
-                height={120}
-                className="rounded-full shadow-lg w-20 lg:w-[120px]"
-                data-ai-hint="gift box"
-              />
-            </motion.div>
-          </div>
+              {/* Decorative Elements */}
+              <div className="absolute -z-10 top-10 -right-10 w-full h-full border-2 border-primary/10 rounded-[2rem] hidden lg:block" />
+              <div className="absolute -z-20 -top-10 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+              <div className="absolute -z-20 bottom-10 -left-20 w-64 h-64 bg-secondary/20 rounded-full blur-3xl" />
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
