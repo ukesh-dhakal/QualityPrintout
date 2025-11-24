@@ -10,12 +10,12 @@ export default function HeroSection() {
   const { handleOpenConfigurator } = useApp();
 
   return (
-    <section className="relative w-full overflow-hidden bg-background pt-20 lg:pt-0 p-10 min-h-[90vh] flex flex-col justify-center">
+    <section className="relative w-full overflow-hidden bg-background pt-32 pb-12 lg:py-0 px-4 lg:px-10 min-h-[90vh] flex flex-col justify-center">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-dot-grid -z-10" />
 
       <div className="container relative z-10 flex-1 flex items-center">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full py-12 lg:py-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center w-full">
 
           {/* Text Content */}
           <motion.div

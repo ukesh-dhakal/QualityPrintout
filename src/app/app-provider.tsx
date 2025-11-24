@@ -2,7 +2,7 @@
 
 import React, { createContext, useState, useContext } from 'react';
 import type { Product } from '@/components/sections/products';
-import Header from '@/components/layout/header';
+
 import PrintConfigurator from '@/components/print-configurator';
 
 type AppContextType = {
@@ -34,7 +34,7 @@ export default function AppProvider({ children }: { children: React.ReactNode })
         handleOpenConfigurator,
       }}
     >
-      <Header onGetQuote={() => handleOpenConfigurator(null)} />
+
       {children}
       <PrintConfigurator
         isOpen={configuratorOpen}

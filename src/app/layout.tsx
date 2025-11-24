@@ -3,7 +3,9 @@ import { Inter, Syne, Oswald } from 'next/font/google';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import Footer from '@/components/layout/footer';
+import Header from '@/components/layout/header';
 import AppProvider from './app-provider';
+import { TopMarquee } from "@/components/layout/top-marquee";
 
 
 export const metadata: Metadata = {
@@ -26,6 +28,8 @@ export default function RootLayout({
         <AppProvider>
           <div className="flex min-h-screen flex-col">
             <main className="flex-1">
+              <TopMarquee />
+              <Header />
               {children}
             </main>
             <Footer />

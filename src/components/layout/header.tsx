@@ -21,9 +21,9 @@ export default function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md">
-      <div className="container flex h-20 lg:h-28 items-center justify-between px-2 sm:px-4 lg:px-6">
-        <div className="flex items-center lg:hidden">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container relative flex h-[12vh] min-h-[80px] items-center justify-center lg:justify-between px-0">
+        <div className="absolute left-4 flex items-center lg:hidden z-20">
           <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
@@ -32,11 +32,11 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
-              <div className="">
+              <div className="w-full flex justify-center py-4">
                 <Image
                   src={Logo}
                   alt="Quality Printout Logo"
-                  className="h-20 w-auto object-contain"
+                  className="h-32 w-auto object-contain"
                   priority
                 />
               </div>
@@ -81,9 +81,14 @@ export default function Header() {
           </nav>
         </div>
 
-        <div className="flex-shrink-0 mx-auto">
-          <Link href="/">
-            <Image src={Logo} alt="Quality Printout Logo" className="h-16 lg:h-28 w-auto object-contain" />
+        <div className="flex-shrink-0 mx-auto h-full flex items-center">
+          <Link href="/" className="h-full flex items-center">
+            <Image
+              src={Logo}
+              alt="Quality Printout Logo"
+              className="h-full w-auto object-contain"
+              priority
+            />
           </Link>
         </div>
 
