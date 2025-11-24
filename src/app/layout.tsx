@@ -1,0 +1,37 @@
+import type { Metadata } from 'next';
+import { Inter, Syne } from 'next/font/google';
+import './globals.css';
+import { Toaster } from "@/components/ui/toaster";
+import Footer from '@/components/layout/footer';
+import AppProvider from './app-provider';
+
+
+export const metadata: Metadata = {
+  title: 'Quality Printout - Top-Quality Advertising Prints',
+  description: 'From billboards to letterheads, we have you covered! Contact us today for all your printing needs.',
+};
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const syne = Syne({ subsets: ['latin'], variable: '--font-syne' });
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className={`${inter.variable} ${syne.variable}`}>
+      <body className="font-body antialiased">
+        <AppProvider>
+          <div className="flex min-h-screen flex-col">
+            <main className="flex-1">
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </AppProvider>
+        <Toaster />
+      </body>
+    </html>
+  );
+}

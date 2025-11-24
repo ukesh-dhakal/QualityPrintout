@@ -1,0 +1,76 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-texture",
+      "description": "A background texture for the hero section, suggesting high-quality paper or print.",
+      "imageUrl": "https://images.unsplash.com/photo-1615917063840-0b7c196e29c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcmludCUyMHRleHR1cmV8ZW58MHx8fHwxNzYzNjM5NjYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "print texture"
+    },
+    {
+      "id": "product-business-cards",
+      "description": "Mockup of professionally printed business cards.",
+      "imageUrl": "https://images.unsplash.com/photo-1623305465231-d884ce752d59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMGNhcmRzfGVufDB8fHx8MTc2MzU2NDUzNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business cards"
+    },
+    {
+      "id": "product-brochures",
+      "description": "Mockup of folded brochures.",
+      "imageUrl": "https://images.unsplash.com/photo-1728566825058-9400dec405f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YnJvY2h1cmVzJTIwbW9ja3VwfGVufDB8fHx8MTc2MzYzOTY2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "brochures mockup"
+    },
+    {
+      "id": "product-flyers",
+      "description": "Mockup of a stack of flyers.",
+      "imageUrl": "https://images.unsplash.com/photo-1630734277837-ebe62757b6e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmbHllcnMlMjBtb2NrdXB8ZW58MHx8fHwxNzYzNjM5NjYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "flyers mockup"
+    },
+    {
+      "id": "product-stickers",
+      "description": "Mockup of custom product packaging.",
+      "imageUrl": "https://images.unsplash.com/photo-1699004642565-b2f85b5088b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzdGlja2VyJTIwbW9ja3VwfGVufDB8fHx8MTc2MzY0MDY2MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sticker mockup"
+    },
+    {
+      "id": "product-banners",
+      "description": "Mockup of a large vinyl banner.",
+      "imageUrl": "https://images.unsplash.com/photo-1684162204492-ba6ada89197a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxiYW5uZXIlMjBtb2NrdXB8ZW58MHx8fHwxNzYzNTUxNTEzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "banner mockup"
+    },
+    {
+      "id": "case-study-before-1",
+      "description": "A blurry, low-resolution design example before printing.",
+      "imageUrl": "https://images.unsplash.com/photo-1554356391-8bbd5018add1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxibHVycnklMjBkZXNpZ258ZW58MHx8fHwxNzYzNjM5NjYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "blurry design"
+    },
+    {
+      "id": "case-study-after-1",
+      "description": "A sharp, vibrant, high-quality print of the same design.",
+      "imageUrl": "https://images.unsplash.com/photo-1612491982164-d807b43b2ac6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzaGFycCUyMHByaW50fGVufDB8fHx8MTc2MzYzOTY2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sharp print"
+    },
+    {
+      "id": "material-matte",
+      "description": "Close-up texture of matte paper stock.",
+      "imageUrl": "https://images.unsplash.com/photo-1706949536423-fe54d390d474?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYXR0ZSUyMHBhcGVyfGVufDB8fHx8MTc2MzYzOTY2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "matte paper"
+    },
+    {
+      "id": "material-glossy",
+      "description": "Close-up texture of glossy paper stock.",
+      "imageUrl": "https://images.unsplash.com/photo-1612375411084-503fa501baed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxnbG9zc3klMjBwYXBlcnxlbnwwfHx8fDE3NjM2Mzk2NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "glossy paper"
+    },
+    {
+      "id": "material-recycled",
+      "description": "Close-up texture of recycled paper stock.",
+      "imageUrl": "https://images.unsplash.com/photo-1616410731309-4e07df6b5d42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxyZWN5Y2xlZCUyMHBhcGVyfGVufDB8fHx8MTc2MzYzOTY2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "recycled paper"
+    },
+    {
+      "id": "material-linen",
+      "description": "Close-up texture of linen paper stock.",
+      "imageUrl": "https://images.unsplash.com/photo-1528458909336-e7a0adfed0a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsaW5lbiUyMHRleHR1cmV8ZW58MHx8fHwxNzYzNjM5NjYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "linen texture"
+    }
+  ]
+}
