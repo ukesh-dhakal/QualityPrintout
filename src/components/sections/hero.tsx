@@ -31,26 +31,28 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-b from-background via-secondary/30 to-background">
-      <div className="container px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="relative w-full  overflow-hidden bg-gradient-to-b from-background via-secondary/30 to-background">
+      <div className="container  ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 content-center items-center mt- p-5">
           <motion.div
             className="text-center lg:text-left h-auto w-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="font-headline text-center text-3xl h-auto w-auto font-extrabold tracking-tight sm:text-4xl lg:text-5xl leading-[1.1]">
-              Quality Printing for <br />
+            <h1 className="font-headline text-center text-3xl h-auto w-auto font-extrabold sm:text-4xl lg:text-5xl leading-tight">
+              Quality Printing for
+            </h1>
+            <div className="relative w-full text-center mt-2">
               <span className="relative inline-block">
                 <span
-                  className="text-3xl sm:text-5xl lg:text-6xl opacity-0 pointer-events-none"
+                  className="block text-3xl sm:text-5xl lg:text-6xl leading-tight opacity-0 pointer-events-none"
                   aria-hidden="true"
                 >
                   Business Cards
                 </span>
 
-                <span className="absolute top-0 left-0 overflow-hidden">
+                <span className="absolute top-0 left-0 w-full overflow-hidden">
                   <AnimatePresence mode="wait">
                     <motion.span
                       key={products[index]}
@@ -58,15 +60,15 @@ export default function HeroSection() {
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: "-100%", opacity: 0 }}
                       transition={{ duration: 0.5, ease: "circOut" }}
-                      className="block text-3xl sm:text-5xl lg:text-6xl leading-[1.1] text-center text-primary"
+                      className="block text-3xl sm:text-5xl lg:text-6xl leading-tight text-center text-primary font-headline font-extrabold"
                     >
                       {products[index]}
                     </motion.span>
                   </AnimatePresence>
                 </span>
               </span>
-            </h1>
-            <p className="mt-6 text-lg text-muted-foreground">
+            </div>
+            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
               Professional printing and branding solutions designed to make
               your business unforgettable.
             </p>
@@ -132,7 +134,7 @@ export default function HeroSection() {
               />
             </motion.div>
 
-            
+
 
             <motion.div
               initial={{ opacity: 0, x: 20 }}
