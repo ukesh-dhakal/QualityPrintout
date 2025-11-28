@@ -10,7 +10,7 @@ export default function HeroSection() {
   const { handleOpenConfigurator } = useApp();
 
   return (
-    <section className="relative w-full overflow-hidden bg-background pt-24 pb-12 lg:pt-32 lg:pb-0 px-4 lg:px-10 min-h-[calc(100vh-4rem)] flex flex-col justify-center">
+    <section className="relative w-full overflow-hidden bg-background pt-20 pb-12 lg:pt-20 lg:pb-0 px-4 lg:px-10 min-h-[calc(100vh-4rem)] flex flex-col justify-center lg:justify-start">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-dot-grid -z-10 opacity-50" />
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] -z-10 animate-pulse" />
