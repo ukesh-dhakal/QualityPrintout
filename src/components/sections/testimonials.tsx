@@ -1,7 +1,7 @@
 
 'use client';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Carousel,
@@ -50,8 +50,14 @@ export default function TestimonialsSection() {
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
   return (
-    <section id="testimonials" className="bg-secondary py-20 sm:py-32">
-      <div className="container px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" className="relative bg-secondary py-20 sm:py-32 overflow-hidden">
+      {/* Background Decor */}
+      <div className="absolute inset-0 bg-dot-grid opacity-10 -z-10" />
+      <div className="absolute -top-20 -left-20 text-primary/5">
+        <Quote size={300} />
+      </div>
+
+      <div className="container px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           className="mx-auto max-w-2xl text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -85,19 +91,22 @@ export default function TestimonialsSection() {
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-1 h-full">
-                    <Card key={testimonial.name} className="flex flex-col h-full transition-all hover:shadow-lg hover:-translate-y-1">
+                    <Card key={testimonial.name} className="flex flex-col h-full transition-all hover:shadow-xl hover:-translate-y-1 border-primary/10">
                       <CardContent className="flex-1 p-6">
                         <div className="flex items-center gap-1 mb-4">
                           {[...Array(testimonial.rating)].map((_, i) => (
                             <Star key={i} className="h-5 w-5 text-yellow-400" fill="currentColor" />
                           ))}
                         </div>
-                        <blockquote className="text-foreground italic">“{testimonial.quote}”</blockquote>
+                        <blockquote className="text-foreground italic relative">
+                          <span className="text-primary/20 text-4xl absolute -top-4 -left-2">“</span>
+                          <span className="relative z-10">{testimonial.quote}</span>
+                        </blockquote>
                       </CardContent>
                       <CardHeader className="p-6 pt-0 mt-auto">
                         <div className="flex items-center gap-3">
-                          <Avatar>
-                            <AvatarFallback>{testimonial.avatar}</AvatarFallback>
+                          <Avatar className="h-10 w-10 border-2 border-primary/20">
+                            <AvatarFallback className="bg-primary/10 text-primary font-bold">{testimonial.avatar}</AvatarFallback>
                           </Avatar>
                           <div>
                             <CardTitle className="text-base font-semibold">{testimonial.name}</CardTitle>
@@ -110,8 +119,8 @@ export default function TestimonialsSection() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden sm:flex" />
-            <CarouselNext className="hidden sm:flex" />
+            <CarouselPrevious className="hidden sm:flex -left-12 h-12 w-12 border-2" />
+            <CarouselNext className="hidden sm:flex -right-12 h-12 w-12 border-2" />
           </Carousel>
         </motion.div>
       </div>

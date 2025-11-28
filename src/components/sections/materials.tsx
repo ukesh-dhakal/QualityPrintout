@@ -24,18 +24,18 @@ export default function MaterialsSection() {
           {materials.map((material) => {
             const image = PlaceHolderImages.find(p => p.id === material.imageId);
             return (
-              <Card key={material.name} className="overflow-hidden">
+              <Card key={material.name} className="overflow-hidden group cursor-pointer">
                 <CardContent className="relative aspect-[3/2] w-full p-0">
                   {image && (
                     <Image
                       src={image.imageUrl}
                       alt={`Texture of ${material.name}`}
                       fill
-                      className="object-cover"
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
                       data-ai-hint={image.imageHint}
                     />
                   )}
-                  <div className="absolute inset-0 bg-black/20" />
+                  <div className="absolute inset-0 bg-black/20 transition-colors group-hover:bg-black/10" />
                   <div className="absolute bottom-0 left-0 p-4">
                     <h3 className="text-xl font-semibold text-white">{material.name}</h3>
                   </div>

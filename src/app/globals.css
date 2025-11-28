@@ -23,6 +23,11 @@ body::before {
   mix-blend-mode: multiply;
 }
 
+::selection {
+  background-color: hsl(var(--primary) / 0.2);
+  color: hsl(var(--primary));
+}
+
 @layer base {
   :root {
     --background: 0 0% 98%;
@@ -82,6 +87,15 @@ body::before {
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-headline uppercase;
   }
 }
 

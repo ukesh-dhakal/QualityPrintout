@@ -18,9 +18,10 @@ export default {
     extend: {
       fontFamily: {
         body: ['var(--font-inter)', 'sans-serif'],
-        headline: ['var(--font-syne)', 'sans-serif'],
+        headline: ['var(--font-oswald)', 'sans-serif'],
         industrial: ['var(--font-oswald)', 'sans-serif'],
-        code: ['var(--font-inter)', 'monospace'],
+        mono: ['var(--font-jetbrains-mono)', 'monospace'],
+        code: ['var(--font-jetbrains-mono)', 'monospace'],
       },
       colors: {
         background: 'hsl(var(--background))',
