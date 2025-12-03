@@ -17,12 +17,12 @@ body::before {
   height: 100%;
   pointer-events: none;
   z-index: 50;
-  opacity: 0.4;
+  opacity: 0.15;
   background-image: url("/images/paper-texture.png");
   background-size: cover;
   background-repeat: no-repeat;
   mix-blend-mode: multiply;
-  filter: contrast(120%) brightness(100%);
+  filter: contrast(110%) brightness(100%);
 }
 
 ::selection {
